@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TK Webstudio — Onepager</title>
+  <meta name="description" content="Onepager in jouw huisstijl met light/dark mode, carousels en nette footer." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Floating glass navbar -->
+  <header id="siteHeader">
+    <div class="container">
+      <a href="#home" class="logo">
+        <img src="images/tkwebstudio_logo_zonder_achtergrond.png" alt="TK Webstudio logo" />
+      </a>
+
+      <button class="mobile-menu-toggle" aria-label="menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#diensten">Diensten</a></li>
+        <li><a class="nav-link" href="#werkwijze">Werkwijze</a></li>
+        <li><a class="nav-link" href="#portfolio">Projecten</a></li>
+        <li><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li>
+          <label class="theme-switch" title="Thema wisselen">
+            <input id="mode-toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-left" data-aos="fade-up">
+        <h1>
+          Maatwerk <span class="typed-text"></span>
+        </h1>
+        <p class="subtitle">Bouwt. Presteert. Groeit.</p>
+        <p>Snelle laadtijden, nette code en focus op conversie.
+          <br>
+          Van concept tot lancering, en daarna doorontwikkeling.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Offerte aanvragen</a>
+          <a href="#portfolio" class="btn btn-secondary"><i class="fa-solid fa-briefcase"></i> Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-right" data-aos="fade-up" data-aos-delay="120">
+        <div class="hero-illustration float-anim">
+          <img src="images/tkwebstudio_header.png" alt="Hero illustratie TK Webstudio">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diensten -->
+  <section id="diensten" class="section">
+    <div class="container">
+      <div class="services-head">
+        <h2 class="section-title">Diensten<span class="highlight">.</span></h2>
+        <p class="section-subtitle">Wat ik voor je bouw en optimaliseer — op maat en met focus op resultaat.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <article class="service-item" data-aos="fade-up">
+          <div class="service-badge">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="service-body">
+            <h3>Custom Webontwerp</h3>
+            <p>Uniek ontwerp in jouw huisstijl, pixel‑precies en conversiegericht. Van wireframe tot live.</p>
+          </div>
+        </article>
+
+        <!-- Service 2 -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="60">
+          <div class="service-badge">
+            <i class="fa-solid fa-display"></i>
+          </div>
+          <div class="service-body">
+            <h3>Responsive Design</h3>
+            <p>Naadloze weergave op mobiel, tablet en desktop met performance als basis.</p>
+          </div>
+        </article>
+
+        <!-- Service 3 -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="120">
+          <div class="service-badge">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <div class="service-body">
+            <h3>Snelheidsoptimalisatie</h3>
+            <p>Optimalisaties voor laadtijd, Core Web Vitals en caching zodat bezoekers blijven.</p>
+          </div>
+        </article>
+
+        <!-- Service 4 -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="180">
+          <div class="service-badge">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <div class="service-body">
+            <h3>SEO optimalisatie</h3>
+            <p>Technische basis, nette semantiek en content‑structuur waardoor je beter gevonden wordt.</p>
+          </div>
+        </article>
+
+        <!-- Service 5 -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="240">
+          <div class="service-badge">
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
+          <div class="service-body">
+            <h3>E‑mail Templates</h3>
+            <p>Op maat gemaakte e‑mailontwerpen die goed renderen in clients en devices.</p>
+          </div>
+        </article>
+
+        <!-- Service 6 -->
+        <article class="service-item" data-aos="fade-up" data-aos-delay="360">
+          <div class="service-badge">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <div class="service-body">
+            <h3>Onderhoud</h3>
+            <p>Updates, monitoring en kleine iteraties zodat alles veilig en snel blijft.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Werkwijze -->
+  <section id="werkwijze" class="section">
+    <div class="container">
+      <h2 class="section-title">Onze werkwijze<span class="highlight">.</span></h2>
+      <p class="section-subtitle">Van strategie tot nazorg — helder en voorspelbaar.</p>
+
+      <div class="process-list">
+        <!-- 01 -->
+        <article class="process-card" data-aos="fade-up">
+          <span class="process-number">01</span>
+          <div class="process-inner">
+            <div class="icon-wrap">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <div class="process-content">
+              <h3>Concept</h3>
+              <p>We bespreken jouw wensen, doelen en budget. Samen maken we een plan dat past bij jouw business.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 -->
+        <article class="process-card" data-aos="fade-up" data-aos-delay="60">
+          <span class="process-number">02</span>
+          <div class="process-inner">
+            <div class="icon-wrap">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <div class="process-content">
+              <h3>Design</h3>
+              <p>Ik ontwerp een moderne, gebruiksvriendelijke interface die aansluit bij jouw merkidentiteit.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 -->
+        <article class="process-card" data-aos="fade-up" data-aos-delay="120">
+          <span class="process-number">03</span>
+          <div class="process-inner">
+            <div class="icon-wrap">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="process-content">
+              <h3>Ontwikkeling</h3>
+              <p>Met moderne technieken bouw ik jouw project. Je blijft op de hoogte van de voortgang.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04 -->
+        <article class="process-card" data-aos="fade-up" data-aos-delay="180">
+          <span class="process-number">04</span>
+          <div class="process-inner">
+            <div class="icon-wrap">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <div class="process-content">
+              <h3>Lancering</h3>
+              <p>Na uitgebreid testen gaat jouw project live. Ik zorg voor een soepele lancering en nazorg.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio carousel -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2 class="section-title">Projecten<span class="highlight">.</span></h2>
+      <p class="section-subtitle">Swipe of klik door cases.</p>
+
+      <div class="swiper portfolio-swiper" data-aos="zoom-in">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <article class="portfolio-item">
+              <div class="portfolio-image">Advocatenkantoor</div>
+              <div class="portfolio-content">
+                <h3>Advocatenkantoor</h3>
+                <p>Korte casebeschrijving. Rustige typografie en strak contactblok.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Onepager</span><span class="tag">AOS</span><span class="tag">SEO</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="portfolio-item">
+              <div class="portfolio-image">Fashion webshop</div>
+              <div class="portfolio-content">
+                <h3>Fashion webshop</h3>
+                <p>Productfocus, snelle grid en duidelijke CTA’s.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Webshop</span><span class="tag">Responsive</span><span
+                    class="tag">Performance</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article class="portfolio-item">
+              <div class="portfolio-image">Webapp dashboard</div>
+              <div class="portfolio-content">
+                <h3>Webapp dashboard</h3>
+                <p>Datavisualisatie, componenten en schaalbare structuur.</p>
+                <div class="portfolio-tags">
+                  <span class="tag">Webapp</span><span class="tag">UI</span><span class="tag">Schaalbaar</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev" aria-label="Vorige"></div>
+        <div class="swiper-button-next" aria-label="Volgende"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials carousel -->
+  <section id="testimonials" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Reviews<span class="highlight">.</span></h2>
+      <p class="section-subtitle">Enkele reviews</p>
+
+      <div class="swiper testimonials-swiper" data-aos="zoom-in">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <blockquote class="testimonial card">
+              <p>“De onepager converteert beter dan onze vorige site.”</p>
+              <footer class="contact-item">
+                <span><i class="fa-solid fa-user"></i></span>
+                <div><strong>Marieke</strong><br><span class="text-light">Eigenaar</span></div>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="swiper-slide">
+            <blockquote class="testimonial card">
+              <p>“Strakke uitvoering en fijne samenwerking. De webshop is merkbaar sneller.”</p>
+              <footer class="contact-item">
+                <span><i class="fa-solid fa-user"></i></span>
+                <div><strong>Tom</strong><br><span class="text-light">E‑commerce lead</span></div>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="swiper-slide">
+            <blockquote class="testimonial card">
+              <p>“Goede structuur, duidelijke CTA’s en perfecte mobile UX.”</p>
+              <footer class="contact-item">
+                <span><i class="fa-solid fa-user"></i></span>
+                <div><strong>Sophie</strong><br><span class="text-light">Productmanager</span></div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact<span class="highlight">.</span></h2>
+    <div class="container contact-content">
+      <div class="contact-form" data-aos="fade-up">
+        <h3>Vrijblijvend kennismaken</h3>
+        <form>
+          <div class="form-group">
+            <label for="naam">Naam</label>
+            <input id="naam" name="naam" type="text" placeholder="Jouw naam" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="jij@voorbeeld.nl" required />
+          </div>
+          <div class="form-group">
+            <label for="onderwerp">Onderwerp</label>
+            <input id="onderwerp" name="onderwerp" type="text" placeholder="Onepager, webshop, app..." />
+          </div>
+          <div class="form-group">
+            <label for="bericht">Bericht</label>
+            <textarea id="bericht" name="bericht" placeholder="Vertel kort wat je zoekt..."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Verstuur</button>
+        </form>
+      </div>
+
+      <div class="contact-info" data-aos="fade-left">
+        <h3>Snelle links</h3>
+        <p>Wil je direct schakelen of meer werk bekijken?</p>
+        <div class="contact-item"><span><i class="fa-solid fa-envelope"></i></span> info@tkwebstudio.nl</div>
+        <div class="contact-item"><span><i class="fa-solid fa-phone"></i></span> +31 6 19 485 671</div>
+        <div class="contact-item"><span><i class="fa-solid fa-location-dot"></i></span> Nederland</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <a href="#home" class="footer-logo">
+          <img src="images/tkwebstudio_logo_zonder_achtergrond.png" alt="TK Webstudio logo" />
+        </a>
+        <p>Maatwerk websites, webshops en webapplicaties die presteren en groeien.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/tahak030/" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/TK030" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/t_krmn06/" aria-label="Instagram"><i
+              class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Diensten</h3>
+        <ul>
+          <li><a href="#diensten">Websites</a></li>
+          <li><a href="#diensten">Webshops</a></li>
+          <li><a href="#diensten">Webapplicaties</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Sitemap</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#diensten">Diensten</a></li>
+          <li><a href="#werkwijze">Werkwijze</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i> info@tkwebstudio.nl</li>
+          <li><i class="fa-solid fa-phone"></i> +31 6 19 485 671</li>
+          <li><i class="fa-solid fa-location-dot"></i> Nederland</li>
+          <li><i class="fa-solid fa-building"></i> KVK: 98739905</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="current-year"></span> TK Webstudio. Alle rechten voorbehouden.</span>
+    </div>
+  </footer>
+
+  <!-- Vendor JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- App JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
