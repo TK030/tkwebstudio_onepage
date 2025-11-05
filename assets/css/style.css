@@ -250,7 +250,7 @@ body.dark-mode .hero::after {
   }
 
   50% {
-    transform: translateY(-30px) rotate(-5deg);
+    transform: translateY(-30px) rotate(-0.1deg);
   }
 
   100% {
