@@ -1,0 +1,11 @@
+# robots.txt voor TK Webstudio
+User-agent: *
+Allow: /
+
+# Blokkeer admin/backend
+Disallow: /assets/php/
+Disallow: /.env
+Disallow: /vendor/
+
+# Sitemap
+Sitemap: https://tkwebstudio.nl/sitemap.xml

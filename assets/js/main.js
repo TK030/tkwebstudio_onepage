@@ -48,20 +48,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Form submissions (jouw logica)
-document.addEventListener('DOMContentLoaded', function () {
-  const forms = document.querySelectorAll('form');
-  forms.forEach(form => {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
-      alert('Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.');
-      form.reset();
-    });
-  });
-});
-
 // Active navigation highlighting (onepager variant)
 document.addEventListener('DOMContentLoaded', function () {
   const links = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -176,33 +162,92 @@ document.addEventListener("DOMContentLoaded", () => {
   initTheme();
 });
 
-// Swiper init (portfolio + testimonials)
+// FAQ Accordion
 document.addEventListener('DOMContentLoaded', function () {
-  if (window.Swiper) {
-    new Swiper('.portfolio-swiper', {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 16,
-      keyboard: { enabled: true },
-      pagination: { el: '.portfolio-swiper .swiper-pagination', clickable: true },
-      navigation: {
-        nextEl: '.portfolio-swiper .swiper-button-next',
-        prevEl: '.portfolio-swiper .swiper-button-prev'
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (!question) return;
+
+    question.addEventListener('click', function () {
+      const isActive = item.classList.contains('active');
+
+      // Sluit alle andere items
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle huidige item
+      if (!isActive) {
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
       }
     });
 
-    new Swiper('.testimonials-swiper', {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 16,
-      autoHeight: true,
-      keyboard: { enabled: true },
-      pagination: { el: '.testimonials-swiper .swiper-pagination', clickable: true },
-      autoplay: { delay: 4500, disableOnInteraction: false }
+    // keyboard accessibility: open/close with Enter or Space
+    question.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
     });
+  });
+});
+
+// Swiper init (portfolio + testimonials)
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.Swiper) {
+    // Portfolio swiper: init only when element exists and avoid loop warnings
+    const portfolioEl = document.querySelector('.portfolio-swiper');
+    if (portfolioEl) {
+      const slides = portfolioEl.querySelectorAll('.swiper-slide');
+      const slidesCount = slides.length;
+
+      // Determine slidesPerView based on current viewport (same breakpoints as config)
+      let initialSlidesPerView = 1;
+      const w = window.innerWidth;
+      if (w >= 1024) initialSlidesPerView = 3;
+      else if (w >= 768) initialSlidesPerView = 2;
+
+      const enableLoop = slidesCount > initialSlidesPerView;
+
+      new Swiper('.portfolio-swiper', {
+        loop: enableLoop,
+        slidesPerView: 1,
+        spaceBetween: 16,
+        watchOverflow: true,
+        keyboard: { enabled: true },
+        pagination: { el: '.portfolio-swiper .swiper-pagination', clickable: true },
+        navigation: {
+          nextEl: '.portfolio-swiper .swiper-button-next',
+          prevEl: '.portfolio-swiper .swiper-button-prev'
+        },
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+    }
+
+    // Testimonials swiper: only init if the container exists
+    const testiEl = document.querySelector('.testimonials-swiper');
+    if (testiEl) {
+      const testiSlides = testiEl.querySelectorAll('.swiper-slide');
+      const testiCount = testiSlides.length;
+      const testiLoop = testiCount > 1; // loop only when more than one slide
+
+      new Swiper('.testimonials-swiper', {
+        loop: testiLoop,
+        slidesPerView: 1,
+        spaceBetween: 16,
+        autoHeight: true,
+        watchOverflow: true,
+        keyboard: { enabled: true },
+        pagination: { el: '.testimonials-swiper .swiper-pagination', clickable: true },
+        autoplay: { delay: 4500, disableOnInteraction: false }
+      });
+    }
   }
 });

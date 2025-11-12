@@ -1,0 +1,7 @@
+/vendor/
+/assets/php/send.log
+/node_modules/
+.DS_Store
+/.idea
+/.vscode
+/*.log
